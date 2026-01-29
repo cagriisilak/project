@@ -1,43 +1,36 @@
 EVRP BSS (Electric Vehicle Routing Problem with Battery
 Swapping Station)
 
-to run, first:
-download python on Visual Studio Code
+downloads:
+- download python on Visual Studio Code\
 run: 
 - python -m pip install --upgrade pip
 - pip install gymnasium stable-baselines3[extra] sb3-contrib torch numpy tensorboard
 
 
-**battery.py**          # Battery system model with modular energy management\
-  methods:
-  - consume_energy(), swap_modules(), needs_swap(), get_total_soc()
+config.py             # Training parameters (timestep length etc)
+evrp_env.py           # Main Gymnasium environment
+battery.py            # Battery system with sequential discharge
+energy.py             # Energy consumption calculations
+graph.py              # Graph representation of nodes/edges
+train.py              # PPO training with action masking
+inference.py          # Model testing and inference
+visualize_scenario.py # Scenario and route visualization
+main.py               # Command-line interface
+utils.py              # Utility functions
+sample_scenario.json  # Larger sample scenario (7 nodes)
+scenario_small.json   # Small test scenario (5 nodes)
+requirements.txt      # Python dependencies
+test_model.py         # For debugging
 
-**config.py**           # Parameters for training (timestep length etc) timesteps should be 100000 minimum but it runs crazy slow on the laurier virtual desktop, takes about 1 minute on my pc
 
-**energy.py**           # Energy calculations
+**How to run:**
+train.py:\
+- run directly to use scenario_small.json, for other scenarios use format: python train.py --scenario sample_scenario.json
 
-**evrp_env.py**         # Environment with a million functions\
-  methods:
-  - a LOT
+inference.py:\
+- python main.py --inference --scenario scenario_small.json --model evrp_model --episodes 3
 
-**graph.py**            # Graph representation of nodes and edges\
-  methods:
-  - calculate_travel_time_minutes(), get_distance_km()
-
-**inference.py**        # Run trained models with action masking (or well it should but I don't think it works), to run: python main.py --inference --scenario scenario_small.json --model evrp_model --episodes 3
-
-**main.py**             # Main
-
-**train.py**            # Main training script, run directly to use scenario_small.json, for other scenarios use format: python train.py --scenario sample_scenario.json
-
-**train_simple.py**     # Simplified training without action masking (using this to debug issues with main training script)
-
-**utils.py**            # Utility functions
-
-**debug_env.py**        # Environment debugging
-
-**test_model.py**       # Supposed to test the model but don't think this works properly
-
-**scenario_small.json** # Small test scenario (5 nodes)
-
-**sample_scenario.json** # Larger sample scenario (7 nodes)
+visualize_scenario.py:\
+- only visualize and save: python visualize_scenario.py --scenario sample_scenario.json --save
+- visualize and run model: python visualize_scenario.py --scenario sample_scenario.json --model evrp_sample_model
