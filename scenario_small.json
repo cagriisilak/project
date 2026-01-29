@@ -1,0 +1,35 @@
+{
+  "nodes": [
+    {"id": "D", "type": "depot", "x": 0, "y": 0},
+    {"id": "C1", "type": "customer", "x": 10, "y": 5},
+    {"id": "C2", "type": "customer", "x": 15, "y": 10},
+    {"id": "BSS1", "type": "bss", "x": 8, "y": 8},
+    {"id": "I1", "type": "intersection", "x": 5, "y": 5}
+  ],
+  "edges": [
+    ["D", "I1", 7.07, 0.9],
+    ["I1", "C1", 5.1, 0.85],
+    ["I1", "BSS1", 4.24, 0.95],
+    ["C1", "C2", 7.07, 0.85],
+    ["C1", "D", 11.18, 0.9],
+    ["BSS1", "C2", 7.28, 0.88],
+    ["C2", "D", 18.03, 0.8]
+  ],
+  "base_speed": 60,
+  "modules": [
+    {"capacity": 10.0, "charge": 100.0},
+    {"capacity": 10.0, "charge": 100.0},
+    {"capacity": 10.0, "charge": 100.0},
+    {"capacity": 10.0, "charge": 100.0},
+    {"capacity": 10.0, "charge": 100.0}
+  ],
+  "starting_node": "D",
+  "vehicle_params": {
+    "M": 1500,
+    "f": 0.01,
+    "Cx": 0.3,
+    "A": 2.5,
+    "m": 100
+  }
+}
+
