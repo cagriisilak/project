@@ -25,12 +25,12 @@ test_model.py         # For debugging\
 
 
 **How to run:**
-train.py:\
+train.py:
 - run directly to use scenario_small.json, for other scenarios use format: python train.py --scenario sample_scenario.json
 
-inference.py:\
+inference.py:
 - python main.py --inference --scenario scenario_small.json --model evrp_model --episodes 3
 
-visualize_scenario.py:\
+visualize_scenario.py:
 - only visualize and save: python visualize_scenario.py --scenario sample_scenario.json --save
 - visualize and run model: python visualize_scenario.py --scenario sample_scenario.json --model evrp_sample_model
