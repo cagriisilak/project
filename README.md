@@ -8,20 +8,20 @@ run:
 - pip install gymnasium stable-baselines3[extra] sb3-contrib torch numpy tensorboard
 
 
-config.py             # Training parameters (timestep length etc)
-evrp_env.py           # Main Gymnasium environment
-battery.py            # Battery system with sequential discharge
-energy.py             # Energy consumption calculations
-graph.py              # Graph representation of nodes/edges
-train.py              # PPO training with action masking
-inference.py          # Model testing and inference
-visualize_scenario.py # Scenario and route visualization
-main.py               # Command-line interface
-utils.py              # Utility functions
-sample_scenario.json  # Larger sample scenario (7 nodes)
-scenario_small.json   # Small test scenario (5 nodes)
-requirements.txt      # Python dependencies
-test_model.py         # For debugging
+config.py             # Training parameters (timestep length etc)\
+evrp_env.py           # Main Gymnasium environment\
+battery.py            # Battery system with sequential discharge\
+energy.py             # Energy consumption calculations\
+graph.py              # Graph representation of nodes/edges\
+train.py              # PPO training with action masking\
+inference.py          # Model testing and inference\
+visualize_scenario.py # Scenario and route visualization\
+main.py               # Command-line interface\
+utils.py              # Utility functions\
+sample_scenario.json  # Larger sample scenario (7 nodes)\
+scenario_small.json   # Small test scenario (5 nodes)\
+requirements.txt      # Python dependencies\
+test_model.py         # For debugging\
 
 
 **How to run:**
