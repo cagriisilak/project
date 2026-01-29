@@ -24,7 +24,7 @@ requirements.txt      # Python dependencies\
 test_model.py         # For debugging\
 
 
-**How to run:**
+**How to run:**\
 train.py:
 - run directly to use scenario_small.json, for other scenarios use format: python train.py --scenario sample_scenario.json
 
