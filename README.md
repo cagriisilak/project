@@ -8,7 +8,7 @@ run:
 - pip install gymnasium stable-baselines3[extra] sb3-contrib torch numpy tensorboard
 
 
-**battery.py**          # Battery system model with modular energy management
+**battery.py**          # Battery system model with modular energy management\
   methods:
   - consume_energy(), swap_modules(), needs_swap(), get_total_soc()
 
@@ -16,11 +16,11 @@ run:
 
 **energy.py**           # Energy calculations
 
-**evrp_env.py**         # Environment with a million functions
+**evrp_env.py**         # Environment with a million functions\
   methods:
   - a LOT
 
-**graph.py**            # Graph representation of nodes and edges
+**graph.py**            # Graph representation of nodes and edges\
   methods:
   - calculate_travel_time_minutes(), get_distance_km()
 
